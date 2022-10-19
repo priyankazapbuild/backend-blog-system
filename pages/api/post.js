@@ -1,16 +1,20 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import excuteQuery from "../db";
-export default function handler(req, res) {
+// console.log("inside");
+// const app = require('express')();
+
+// app.use(express.json());
+// app.use(express.urlencoded({
+//     extended: true,
+// }));
+export default async function handler(req, res) {
   try {
-    // const title = req.body.title;
-    // const description = req.body.description;
-    const result = excuteQuery({
-      query: 'SELECT * FROM posts',
-      // values: [title],
+    const result = await excuteQuery({
+        query: 'SELECT * FROM posts',
+        values: [],
     });
-    console.log(result, "mmm");
+    // console.log(result, "mmm");
     return result;
-    // res.status(200).json({result});
   } catch (error) {
     console.log(error);
   }

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "next": "12.3.1",
+    "nextjs-cors": "^2.1.1",
+    "nodemon": "^2.0.20",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "serverless-mysql": "^1.5.4"
